@@ -1,0 +1,44 @@
+﻿@model SistemaWebMisRecetas.Models.Receta
+@{
+    ViewData["Title"] = "Details";
+}
+
+
+@section SideBar{
+    @Html.ActionLink("Nueva Receta", "Create","Receta")
+}
+
+<h2>Ver Detalle</h2>
+
+<p>
+    @Html.DisplayNameFor(model=>model.Nombre)
+    @Html.DisplayFor(model=>model.Nombre)
+</p>
+<p>
+    @Html.DisplayNameFor(model=>model.Categoría)
+    @Html.DisplayFor(model=>model.Categoría)
+</p>
+<p>
+    @Html.DisplayNameFor(model=>model.Ingrediente)
+    @Html.DisplayFor(model=>model.Ingrediente)
+</p>
+<p>
+    @Html.DisplayNameFor(model=>model.Instruccion)
+    @Html.DisplayFor(model=>model.Instruccion)
+</p>
+<p>
+    @Html.DisplayNameFor(model=>model.NombreAutor)
+    @Html.DisplayFor(model=>model.NombreAutor)
+</p>
+<p>
+    @Html.DisplayNameFor(model=>model.ApellidoAutor)
+    @Html.DisplayFor(model=>model.ApellidoAutor)
+</p>
+<p>
+    @Html.DisplayNameFor(model=>model.EdadAutor)
+    @Html.DisplayFor(model=>model.EdadAutor)
+</p>
+<p>
+    @Html.DisplayNameFor(model=>model.EmailAutor)
+    @Html.DisplayFor(model=>model.EmailAutor)
+</p>

@@ -1,0 +1,41 @@
+﻿@model IEnumerable<SistemaWebMisRecetas.Models.Receta>
+@{
+    ViewData["Title"] = "Lista por Autor";
+}
+
+
+
+
+@section SideBar{
+    @Html.ActionLink("Nueva Receta", "Create","Receta")
+}
+
+<table>
+    <tr>
+        
+        <th>@Html.DisplayNameFor(m=> m.Nombre)</th>
+        <th>@Html.DisplayNameFor(m=> m.Categoría)</th>
+        <th>@Html.DisplayNameFor(m=> m.NombreAutor)</th>
+        <th>@Html.DisplayNameFor(m=> m.ApellidoAutor)</th>
+    </tr>
+
+    @foreach (var receta in Model)
+    {
+        <tr>
+            
+            <td>
+                @Html.DisplayFor(m=> receta.Nombre)
+            </td>
+            <td>
+                @Html.DisplayFor(m=> receta.Categoría)
+            </td>
+            <td>
+                @Html.DisplayFor(m=> receta.NombreAutor)
+            </td>
+            <td>
+                @Html.DisplayFor(m=> receta.ApellidoAutor)
+            </td>
+
+        </tr>
+    }
+</table>
